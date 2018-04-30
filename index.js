@@ -24,7 +24,7 @@ if (!currencyPair) {
 	process.exit(1);
 }
 
-var outputFilePath = path.join(__dirname, 'data.csv');
+var outputFilePath = path.join(__dirname, 'daily-spot-price-' + currencyPair + '-from-' + startDate.format('YYYY-MM-DD') + '.csv');
 var outputFileWriteStream = fs.createWriteStream(outputFilePath);
 
 var getData = function(date, cb) {
